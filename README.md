@@ -59,7 +59,7 @@ print(lm_metrics)
 ggplot(data = dataset, aes(x = Humidity, y = Temperature..C.)) +
   geom_point() +  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
 labs(x = "Humidity", y = "Temperature")
-```sh
+```
 
 #### output:
 
@@ -96,7 +96,7 @@ ggplot(data = plot_data, aes(x = Humidity)) +
   labs(x = "Humidity", y = "Temperature") +
   ggtitle("Polynomial Regression: Temperature vs. Humidity") +
   theme_pubclean()
-  ```sh
+  ```
 
 #### Output:
 
@@ -133,7 +133,7 @@ ggplot(data = dataset, aes(x = Summary , y = Temperature..C.)) +
   labs(x = "Summary", y = "Temperature") +
   ggtitle("Temperature Distribution by Summary")
 str(dataset)
-```sh
+```
 
 ## Conclusion
 
