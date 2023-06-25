@@ -58,7 +58,8 @@ print(lm_metrics)
 # Create a scatter plot with a smooth curve
 ggplot(data = dataset, aes(x = Humidity, y = Temperature..C.)) +
   geom_point() +  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
-labs(x = "Humidity", y = "Temperature")```sh
+labs(x = "Humidity", y = "Temperature")
+```sh
 
 #### output:
 
@@ -94,7 +95,8 @@ ggplot(data = plot_data, aes(x = Humidity)) +
   geom_line(aes(y = predicted_temperature), color = "red", size = 1) +
   labs(x = "Humidity", y = "Temperature") +
   ggtitle("Polynomial Regression: Temperature vs. Humidity") +
-  theme_pubclean()```sh
+  theme_pubclean()
+  ```sh
 
 #### Output:
 
@@ -130,7 +132,8 @@ ggplot(data = dataset, aes(x = Summary , y = Temperature..C.)) +
   geom_boxplot(fill = "lightblue", color = "black") +
   labs(x = "Summary", y = "Temperature") +
   ggtitle("Temperature Distribution by Summary")
-str(dataset)```sh
+str(dataset)
+```sh
 
 ## Conclusion
 
