@@ -36,6 +36,7 @@ We first performed linear regression to model the relationship between temperatu
 
 #### Linear Regression program:
 
+```sh
 library(ggplot2)   # For data visualization
 library(dplyr)     # For data manipulation
 library(caret)     # For machine learning algorithms
@@ -57,7 +58,7 @@ print(lm_metrics)
 # Create a scatter plot with a smooth curve
 ggplot(data = dataset, aes(x = Humidity, y = Temperature..C.)) +
   geom_point() +  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
-labs(x = "Humidity", y = "Temperature")
+labs(x = "Humidity", y = "Temperature")```sh
 
 #### output:
 
@@ -67,7 +68,7 @@ The scatter plot above shows the observed temperature values plotted against the
 To capture potential non-linear relationships between temperature and humidity, we also applied polynomial regression. Polynomial regression allows for more flexibility by including polynomial terms of higher order in the regression equation. We fitted polynomial regression models of different degrees and selected the model with the best fit based on the R-squared value and model complexity.
 
 #### Polynomial Regression program:
-
+```sh
 library(ggplot2)
 library(dplyr)
 library(ggpubr)
@@ -93,7 +94,7 @@ ggplot(data = plot_data, aes(x = Humidity)) +
   geom_line(aes(y = predicted_temperature), color = "red", size = 1) +
   labs(x = "Humidity", y = "Temperature") +
   ggtitle("Polynomial Regression: Temperature vs. Humidity") +
-  theme_pubclean()
+  theme_pubclean()```sh
 
 #### Output:
 
@@ -102,7 +103,7 @@ The plot above illustrates the relationship between temperature and humidity usi
 ## Plots
 
 #### Program:
-
+```sh
 library(ggplot2)
 #Read the dataset
 dataset <-  read.csv("~/weatherHistory.csv",header = TRUE)
@@ -129,7 +130,7 @@ ggplot(data = dataset, aes(x = Summary , y = Temperature..C.)) +
   geom_boxplot(fill = "lightblue", color = "black") +
   labs(x = "Summary", y = "Temperature") +
   ggtitle("Temperature Distribution by Summary")
-str(dataset)
+str(dataset)```sh
 
 ## Conclusion
 
